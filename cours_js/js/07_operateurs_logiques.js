@@ -17,6 +17,10 @@ if ((prenomBDD === prenomCompte) && (ageBDD === ageCompte));{
 */
 //L'opérateur || ou OR permet de rentrer dans la condition si au moins une des deux est vrai
 
+if ((prenomBDD === prenomCompte) || (ageBDD === ageCompte));{
+    //code si uen des 2 condition est validée
+}
+
 => si a est FAUX et b est VRAI => VRAI
 => si a est VRAI et b est FAUX => VRAI
 => si a est FAUX et b est FAUX => FAUX
