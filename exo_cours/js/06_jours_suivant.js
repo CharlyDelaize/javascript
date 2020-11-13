@@ -35,7 +35,7 @@ if (dimanche === jour){
 }
 
 else{
-    alert(jour + " n'est pas un jour valable")
+    alert("Désolé, vérifiez votre orthographe et écrivez en minuscule")
 }
 */
 
@@ -77,7 +77,7 @@ switch (jour) {
       break;
     default:
         //alert("Jour incorrect");
-        alert("Désolé, vérifiez votre orthographe et écrivez en minuscule");
+        alert(jour + " n'est pas un jour valable");
         break;
 }
 
