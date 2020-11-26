@@ -60,6 +60,4 @@ for(var mesSous = 1000; mesSous < 2000; mesSous += 50){
     document.write("<p>Le mois suivant, j'aurai : " + mesSous + "€</p>");
     tps ++;
 }
-document.write("<p>Il aura fallu " + tps + " mois pour avoir 2000€ sur mon compte")
-
-/*
+document.write("<p>Il aura fallu " + tps + " mois pour avoir 2000€ sur mon compte");
