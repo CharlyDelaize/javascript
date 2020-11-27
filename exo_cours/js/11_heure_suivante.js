@@ -62,4 +62,4 @@ time.setSeconds(seconde);
 time.setSeconds( time.getSeconds() +1 );
 
 document.write( time.getHours() +" h " +time.getMinutes() +" min " +time.getSeconds() +" s ");
-  /*
+  */
