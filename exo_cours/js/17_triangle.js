@@ -19,7 +19,7 @@ document.write(diese + diese + diese + diese + diese + diese + "<br />");
 document.write(diese + diese + diese + diese + diese + diese +  diese + "<br />");
 */
 
-var diese = "";
+/* var diese = "";
 var rang;
 for(rang = 0; rang <= 7; rang++){
     diese += "#";
@@ -33,4 +33,11 @@ while(i <= 7){
     caractere = caractere + "#";
     console.log(caractere);
     i++;
+} */
+
+var diese = "";
+var rang;
+for(rang = 0; rang <= 7; rang++){
+    diese += "#";
+    document.write(diese + "<br />");
 }
