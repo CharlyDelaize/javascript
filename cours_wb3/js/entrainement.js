@@ -107,15 +107,20 @@ if (a > b){
     document.write('Oui a est supérieur à b');
 }
 
+document.write("<br>");
+
 //SI a est SUPERIEUR à b ET si b est SUPERIEUR à c
 if(a > b && b > c){
     document.write('VRAI');
 }
 
+document.write("<br>");
 
 if(a > b || b < c){
     document.write('VRAI');
 }
+
+document.write("<br>");
 
 if(a > b && b < c){
     document.write('VRAI');
@@ -123,10 +128,14 @@ if(a > b && b < c){
     document.write('FAUX');
 }
 
+document.write("<br>");
+
 var maVariable = 1, maVariable2 = "1";
 if(maVariable == maVariable2){
     document.write('VRAI');
 }
+
+document.write("<br>");
 
 if(maVariable === maVariable2){
     document.write('VRAI');
@@ -152,6 +161,8 @@ if (!isNaN(nombre)){
     document.write('FAUX');
 }
 
+document.write("<br>");
+
 //déclarer une variable age ensuite vérifier si l'age saisi de l'utilisateur (vous) est majeur ou mineur
 
 var agePersonne = 26
@@ -161,10 +172,14 @@ if(agePersonne >= 18){
     document.write("vous etes mineur");
 }
 
+document.write("<br>");
+
 //déclarer et afficher une constante
 
 const AGE_PERSONNE = 26;
 document.write(AGE_PERSONNE);
+
+document.write("<br>");
 
 //déclarer une variable string et afficher son type dans la console
 
@@ -174,6 +189,8 @@ console.log(typeof mot);
 //écrire une condition ternaire qui vérifie si 2 est plus petit que 4
 var chiffre1 = 2, chiffre2 = 4;
 document.write((chiffre1 < chiffre2) ? 'oui' : 'non');
+
+document.write("<br>");
 
 //écrire une variable nom qui a pour valeur 10 et vérifier que le nombre est bien un "number"
 document.write("<br>");
@@ -185,6 +202,8 @@ if(typeof nombre == "number")
     document.write('nombre est de type number');
 }
 
+document.write("<br>");
+
 //calculer le prix TTC de ma PS5 à 499.99€ et afficher le résultat (la TVA est à 19.6%), le prix est 597.98 TTC
 var prixht = 499.99, tva = 19.6
 var prixttc;
@@ -192,6 +211,8 @@ var prixtva;
 prixtva = prixht * tva / 100;
 prixttc = prixht + prixtva
 document.write(prixttc);
+
+document.write("<br>");
 
 //Conditions switch
 
@@ -216,6 +237,8 @@ switch(couleur)
         break;
 }
 
+document.write("<br>");
+
 var age = prompt("saisir un age");
 console.log("le type d'age est : " + typeof age);
 // SI le nombre saisi est bien un "number"
@@ -229,10 +252,14 @@ if(!isNaN(age)){
     }
 }
 
+document.write("<br>");
+
 var resultat = "10" + "2";
 var resultat2 = 1 + 1;
 document.write(resultat);
 document.write(resultat2);
+
+document.write("<br>");
 
 document.write("<h2>Les Boucles</h2>");
 
@@ -279,11 +306,137 @@ var k = 0
 document.write("boucle while")
 while(k < liste_fruits.length){
     document.write(liste_fruits[k] + "<br>");
-    k++
+    k++;
 }
 
-var liste_nombre = [1, 2, 3, 4, 19, 918];
-for(var l = 0; l < 6; l++)
+
+//Boucle for : demander l'age de l'utilisateur tant que celui ci n'est pas majeur
+
+/* var i
+for(i = 0; i < 1; i++) // ne marche que si on enlève l'incrémenation
 {
-    document.write(liste_fruits[l] + "<br>");
+    age = prompt("quel est votre age");
+    if(age >= 18){
+        alert("Vous etes majeur");
+        break;
+    }
+}while(true); */
+
+//Boucle while : demander l'age de l'utilisateur tant que celui ci n'est pas majeur
+
+/* var age;
+while(true){
+    age = prompt("Quel age a tu ?");
+    if(age >= 18) {
+        alert('vous etes majeur'); 
+    }
+} */
+
+//Boucle do while : demander l'age de l'utilisateur tant que celui ci n'est pas majeur
+
+/* do{
+    age = prompt("Quel age as-tu");
+    if(age >= 18){
+        alert("vous etes majeur");
+        break;
+    }
+}while(true) */
+
+document.write("<h2>Tableau multi-dimensionnel<h2>");
+
+var list_fruits2 = [['fraise', 'pomme', 'kiwi'],['tomate', 'mangue'],['Pierre','Paul','Jacques']];
+
+document.write((list_fruits2[0][0]) + "<br>"); //fraise
+document.write((list_fruits2[0][1]) + "<br>"); //pomme
+document.write((list_fruits2[1][0]) + "<br>"); //tomate
+document.write((list_fruits2[1][1]) + "<br>"); //mangue
+document.write('<br>');
+for(var i = 0 ; i < list_fruits2.length ; i++){
+    for(var j = 0 ; j < list_fruits2[i].length ; j++)
+    {
+        document.write(list_fruits2[i][j] + "<br>");
+    }
+}
+
+// Déclarer une liste de prénom minimum 10 prénom
+// Premier exercice afficher un message de bienvenue lorsque vous avez un "pierre" dans votre liste de contact
+// Deuxième étape, afficher le nombre de pierre dans votre tableau
+
+var liste_prenom = ['Pierre', 'Paul', 'Jacques', 'Jean', 'Pierre', 'Paul', 'Jacques', 'Jean', 'Louis', 'Pierre'];
+var compteur = 0;
+for(i = 0 ; i < liste_prenom.length ; i++)
+{
+    if(liste_prenom[i] == "Pierre"){
+        document.write("Bienvenue à toi ! " + liste_prenom[i] + "<br>");
+        compteur++;
+    }
+}
+
+document.write("J'ai " + compteur + " Pierre dans mon tableau");
+
+document.write("<h2>Fonctions utilisateurs et predefinies<h2>");
+
+var phrase = "BONSOIR";
+
+document.write(phrase.toLowerCase() + "<br>"); //bonsoir
+
+function afficher(){
+    document.write('Hello World');
+}
+
+afficher();
+
+function d(arg){
+    document.write(arg + "<br>");
+}
+
+d("Salut Charly");
+d("Salut Uiu");
+d(3);
+d("Salut Charly" + "Salut Atoi");
+
+function toto(){
+    var a = 1;
+
+    return a;
+}
+
+document.write(toto());
+
+document.write("<br>");
+
+function plusieursParam(prenom, nom, age){
+    document.write("Bonjour " + prenom + " " + nom + " tu as " + age + " ans");
+}
+
+plusieursParam("Charly", "Delaize", 26);
+document.write("<br>");
+plusieursParam("Machin","Chose",62);
+
+//déclarer une fonction qui calcule le prix d'un article
+// TVA = 19.6 ou 1.196
+// prixTTC(399) -----> 477.204
+// prixTTC(14,99) -----> 17.92804
+// afficher le prix arrondi à 2 chiffres après la virgule, il existe une fonction prédéfinie (à rechercher sur google)
+
+document.write("<br>");
+
+var prixHT = 399;
+var tva = 1.196;
+var prixTTC = prixHT * tva;
+prixTTC = Math.round(477.204 * 100) / 100 ;
+document.write(prixTTC);
+
+document.write("<br>");
+
+var prixHT = 14.99;
+var prixTTC = prixHT * tva;
+prixTTC = Math.round(17.92804 * 100) / 100;
+document.write(prixTTC);
+
+document.write("<br>");
+
+function prixTTC(prix){
+    prix = prix * 1.196;
+    return Math.round(prix * 100) / 100;
 }
