@@ -440,3 +440,120 @@ function prixTTC(prix){
     prix = prix * 1.196;
     return Math.round(prix * 100) / 100;
 }
+
+var maFunction = function () {
+    document.write('nous sommes jeudi');
+}
+
+maFunction();
+
+document.write("<br>");
+
+(function(){
+    document.write('cette fonction est anonyme et automatiquement executé');
+})();
+
+document.write("<br>");
+
+var animal = "chien";
+
+function test(){
+    document.write(animal + "<br>");
+}
+
+test()
+
+function test2(){
+    animal2 = "chat";
+    document.write(animal2 + "<br>");
+}
+
+test2()
+document.write(animal2 + "<br>");
+
+document.write("<h2>Objets</h2>");
+
+var monObjet = {};
+
+monObjet.prenom = 'Charly';
+monObjet.nom = 'DELAIZE';
+
+document.write(monObjet.prenom + "<br>");
+
+var Homme = {
+    nom : 'Winter',
+    prenom : 'Thomas',
+    age : 35
+};
+
+document.write(Homme.prenom);
+
+var Voiture = {
+    marque : 'mercedes',
+    modele : 'class A',
+    couleur : 'noir',
+    changeDeCouleur : function(nouvelle){
+        return this.couleur = nouvelle;
+    },
+    optionDeSerie : ['clim', 'autoradio', 'park-assist'],
+    annee : 2020,
+    motorisation : {
+        energie : 'diesel',
+        puissance : '110cv'
+    }
+};
+
+document.write(Voiture.couleur + "<br>"); //noir
+Voiture.changeDeCouleur("rose");
+document.write(Voiture.couleur + "<br>"); //rose
+document.write(Voiture.optionDeSerie[0] + "<br>"); //clim
+document.write(Voiture.motorisation.energie + "<br>"); //diesel
+
+//foreach
+for(var element in Voiture){
+    document.write(element + " : " + Voiture[element] + "<br>");
+
+    if(typeof Voiture[element] === "object") {
+        for(var elementB in voiture.motorisation){
+            document.write(elementB + ":" + Voiture.motorisation[elementB] + "<br>");
+        }
+    }
+}
+
+function Animal(nom, espece, categorie, age){
+    this.nom = nom;
+    this.espece = espece;
+    this.categorie = categorie;
+    this.age = age;
+}
+
+var dauphin = new Animal('Flipper', 'dauphin', 'mammifere', '3');
+
+document.write(dauphin.nom);//Flipper
+
+function Contact(nom, prenom, adresse, age){
+    this.nom = nom;
+    this.prenom = prenom;
+    this.adresse = adresse;
+    this.age = age;
+}
+
+var contact1 = new Contact('DELAIZE', 'Charly', '45 rue des Spheres', 26);
+
+document.write(contact1.adresse);
+
+document.write("<br>");
+
+//Prototypage
+
+function Vehicule(marque){
+    this.marque = marque;
+}
+
+var megane = new Vehicule('Renault');
+
+megane.demarrer = function() {
+    document.write('vroom vroom je demarres <br>')
+}
+
+megane.demarrer()
