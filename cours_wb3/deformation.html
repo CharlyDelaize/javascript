@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            height: 200px; width: 300px; border: 3px solid; margin-bottom: 30px; position: relative;
+        }
+
+        #maDiv1{
+            background-color: yellow;
+        }
+
+        #maDiv2{
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body style=" ">
+    <!-- écriture du CSS dans un attribut d'évènement HTML -->
+    <div id="maDiv1"></div>
+    <div id="maDiv2"></div>
+    <script>
+        document.getElementById("maDiv1").onclick = function() {
+            this.style.width = '150px';
+         }; /* thos à voir dans chapitre THIS */
+        document.getElementById("maDiv1").ondblclick = function() {
+            this.style.width = '300px';
+         }; /* thos à voir dans chapitre THIS */
+        document.getElementById("maDiv2").onclick = function() {
+            this.style.backgroundColor = 'purple'; /* thos à voir dans chapitre THIS */
+        }
+        document.getElementById("maDiv2").ondblclick = function() {
+            this.style.backgroundColor = 'yellow'; /* thos à voir dans chapitre THIS */
+        }
+    </script>
+    
+</body>
+</html>

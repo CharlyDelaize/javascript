@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="img/renard1.jpg" alt="" id="galerie" />
+    <br>
+    <input type="button" onclick="imagePrecedente();" value="Précédent" />
+<input type="button" value="Suivant" onclick="imageSuivante();" />
+    <script type="text/javascript"><!--
+        image = 1;
+        images = Array('|',
+            'img/renard1.jpg',
+            'img/renard2.jpg',
+        '|');
+        
+        function imageSuivante() {
+            new_image = images[image + 1]
+            if(new_image != '|') {
+                document.getElementById('galerie').src = new_image;
+                image = image + 1;
+            }
+        }
+        
+        function imagePrecedente() {
+            new_image = images[image - 1]
+            if(new_image != '|') {
+                document.getElementById('galerie').src = new_image;
+                image = image - 1;
+            }
+        }
+        // --></script>
+</body>
+</html>
