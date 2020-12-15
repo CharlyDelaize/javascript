@@ -209,7 +209,7 @@ var prixht = 499.99, tva = 19.6
 var prixttc;
 var prixtva;
 prixtva = prixht * tva / 100;
-prixttc = prixht + prixtva
+prixttc = prixht + prixtva;
 document.write(prixttc);
 
 document.write("<br>");
@@ -397,7 +397,6 @@ d("Salut Charly" + "Salut Atoi");
 
 function toto(){
     var a = 1;
-
     return a;
 }
 

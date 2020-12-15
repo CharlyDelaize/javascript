@@ -1,3 +1,5 @@
+-------- Javascript --------
+
 01 _ Commentaire , affichage, concaténation
 02 _ Variables, constantes, type de données
 
@@ -28,5 +30,75 @@ mouseOver
 blur
 focus
 submit
+
+-------- JQUERY --------
+
+jQuery, qu'est-ce que c'est ?
+
+jQuery est une bibliothèque Javascript, c'est à dire un ensemble de fonctions qui permettent d'écrire de manière condensée, les lignes de code les plus utilisées en Javascript.
+
+JS : document.getElementByTagName("li")[0].innerHTML = "Lait";
+jQuery : $("li:first").text("lait");
+
+"write less do more" ---> écrire moins, faites en plus.
+
+Intégration de jQuery ?
+
+copie locale : <!-- <script src="chemin-vers votre-fichier-jquery.js" type="text/javascript"></script> -->
+
+serveur public : <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+
+Y a t'il un emplacement particulier pour l'appel à jQuery ?
+<style>
+    .newClass {
+        color: red;
+        background: black;
+    }
+</style>
+
+<h1>TITRE</h1>
+<div class="avion">AirBus1</div>
+<div class="avion">AirBus2</div>
+<div class="avion">AirBus3</div>
+<section id="maSection">Il était une fois</section><span>span</span>
+<a href="https://www.google.com/">Google</a>
+
+<script>
+    jQuery(document).ready(function($){
+    //Ici, j'intègrerai mon code jQuery)
+    });
+</script>
+
+<script>
+    jQuery(document).ready(function($){
+        //document.elementByClassName('avion')
+        //document.querySelectorAll('avion')
+        var allAvion = $('.avion'); //séléctionne tous les éléments ayant la classe "avion"
+        var firstPlane = $('.avion:first');
+        var lastPlane = $('.avion:last');
+        var xPlane = $('.avion:eq(1)');
+
+        //$('element_cible').evenement(function(){});
+        firstPlane.click(function(){
+            firstPlane.css({
+                'background' : 'red',
+                'color': '#fff',
+                'text-decoration': 'underline',
+                'font-weight' : 'bold',
+            });
+        });
+
+        firstPlane.text('Un nouveau texte');
+
+        $('span:first').addClass('newClass');
+
+        $('h1').hide();
+
+        });
+        $('a').click(function(event){
+            event.preventDefault();
+            alert('Tu ne peux pas aller sur Google');
+    });
+</script>
 
 <script src="js/cours.js"></script>

@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    
 </head>
 <body>
     <div class="avion">Airbus1</div>
@@ -26,6 +28,38 @@
 
     <div id="resultat">resultat...</div>
 
-    <script src="js/selecteur.js"></script>
+    <a href="https://www.google.com/">Google</a>
+
+    <!-- <script src="js/selecteur.js"></script> -->
+    
+    <script>
+        jQuery(document).ready(function($){
+            //document.elementByClassName('avion')
+            //document.querySelectorAll('avion')
+            var allAvion = $('.avion'); //séléctionne tous les éléments ayant la classe "avion"
+            var firstPlane = $('.avion:first');
+            var lastPlane = $('.avion:last');
+            var xPlane = $('.avion:eq(1)');
+    
+            //$('element_cible').evenement(function(){});
+            firstPlane.click(function(){
+                firstPlane.css({
+                    'background' : 'red',
+                    'color': '#fff',
+                    'text-decoration': 'underline',
+                    'font-weight' : 'bold',
+                });
+            });
+
+            firstPlane.text('Un nouveau texte');
+
+            $('span').addClass('newClass');
+    
+            $('a').click(function(event){
+                event.preventDefault();
+                alert('Tu ne peux pas aller sur Google');
+            })
+        });
+    </script>
 </body>
 </html>
